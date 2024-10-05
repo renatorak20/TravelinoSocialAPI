@@ -1,6 +1,5 @@
 package com.travel.travelapi.post.model
 
-import com.travel.travelapi.auth.User
 import jakarta.persistence.*
 import java.math.BigDecimal
 import java.time.Instant
@@ -12,11 +11,11 @@ data class Post(
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long? = null,
 
-    @Column(nullable = false)
-    val description: String = "",
+    @Column(nullable = true)
+    val description: String? = "",
 
     @Column(nullable = false)
-    var userId: Long,
+    val userId: Long,
 
     @Column(name = "image_url")
     val imageUrl: String? = null,
@@ -31,5 +30,10 @@ data class Post(
     val timestamp: Long? = Instant.now().toEpochMilli(),
 
     @Column(nullable = true)
-    val city: String? = ""
-)
+    val city: String? = "",
+
+    @Column(nullable = true)
+    val likes: Int? = 0
+) {
+    constructor() : this(null, null, 0, null, null, null, null, null, 0)
+}

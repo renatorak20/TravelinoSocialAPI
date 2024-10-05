@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AWSLambdaDeployerStateService">
+    <option name="explicitProfiles">
+      <map>
+        <entry key="travelapi">
+          <value>
+            <ExplicitAWSProfile>
+              <option name="accessKey" value="AKIAT*****QQDGJ" />
+              <option name="name" value="travelapi" />
+              <option name="region" value="eu-west-1" />
+              <option name="secretKey" value="SL7VL*****wqvI7" />
+            </ExplicitAWSProfile>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="flags">
+      <Flags>
+        <option name="flyway" value="2" />
+        <option name="init" value="1" />
+      </Flags>
+    </option>
+    <option name="profiledState">
+      <map>
+        <entry key="">
+          <value>
+            <ProfiledState>
+              <option name="profileName" value="" />
+            </ProfiledState>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

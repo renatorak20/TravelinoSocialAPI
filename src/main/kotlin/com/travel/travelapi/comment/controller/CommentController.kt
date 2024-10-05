@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-@RequestMapping("/post/{postId}/comment")
+@RequestMapping("/posts/{postId}/comments")
 class CommentController(
     private val commentService: CommentService
 ) {
@@ -24,13 +24,9 @@ class CommentController(
     }
 
     @PostMapping
-    fun createComment(@RequestBody request: Comment): ResponseEntity<Comment?> {
+    fun create(@RequestBody request: Comment): ResponseEntity<Comment> {
         val createdComment = commentService.createComment(request)
-        return if (createdComment != null) {
-            ResponseEntity.ok(createdComment)
-        } else {
-            ResponseEntity.internalServerError().build<Comment?>()
-        }
+        return ResponseEntity.ok(createdComment)
     }
 
 }
