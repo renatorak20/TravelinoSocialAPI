@@ -30,7 +30,7 @@ dependencies {
 	implementation("com.mysql:mysql-connector-j:9.0.0")
 	implementation("org.springframework.boot:spring-boot-starter-oauth2-client:3.3.4")
 	implementation("org.springframework.security:spring-security-oauth2-resource-server:6.3.3")
-
+	implementation("org.postgresql:postgresql:42.5.4")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("io.projectreactor:reactor-test")
 	testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")

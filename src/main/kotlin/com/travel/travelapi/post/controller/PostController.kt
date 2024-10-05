@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController
 import java.util.*
 
 @RestController
-@RequestMapping("/post")
+@RequestMapping("/posts")
 class PostController(
     private val postService: PostService
 ) {
@@ -48,7 +48,7 @@ class PostController(
     }
 
     @PostMapping
-    fun createPost(@RequestBody request: Post): ResponseEntity<Post?> {
+    fun create(@RequestBody request: Post): ResponseEntity<Post?> {
         val createdPost = postService.createPost(request)
         return if (createdPost != null) {
             ResponseEntity.ok(createdPost)
@@ -58,7 +58,7 @@ class PostController(
     }
 
     @DeleteMapping
-    fun deletePosts(): ResponseEntity<*> {
+    fun deleteAll(): ResponseEntity<*> {
         postService.deletePosts()
         return ResponseEntity.ok(true)
     }
